@@ -96,4 +96,9 @@ public class CartItemService {
         return itemList;
 
     }
+
+    public void clearCart(String userId) {
+        us.findById(Long.valueOf(userId)).ifPresent(cir::deleteByUser);
+
+    }
 }
